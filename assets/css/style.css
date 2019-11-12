@@ -1,0 +1,32 @@
+#navbar-container{
+    padding-right: 6% !important;
+    padding-left: 8% !important;
+}
+
+
+@font-face{
+    font-family: 'Conduit ITC';
+     src: url('../font/Conduit_ITC.ttf');
+}
+
+body{
+    font-family: 'Conduit ITC';
+    color: rgba(0, 29, 51, 0.7) !important;
+}
+
+.brand-logo{
+    font-size: 40px;
+
+}
+
+.nav{
+    background-color: #F7FAFC;
+    color: rgba(0, 29, 51, 0.7) !important;
+}
+
+nav ul li a:hover{
+    text-decoration: none;
+    background: transparent;
+    color: #001D33;
+}
+
