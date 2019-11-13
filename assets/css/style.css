@@ -1,28 +1,33 @@
-#navbar-container{
-    padding-right: 6% !important;
-    padding-left: 8% !important;
-}
-
 
 @font-face{
     font-family: 'Conduit ITC';
      src: url('../font/Conduit_ITC.ttf');
 }
 
+
 body{
     font-family: 'Conduit ITC';
     color: rgba(0, 29, 51, 0.7) !important;
 }
+
+
+#container{
+    padding-right: 6% !important;
+    padding-left: 8% !important;
+}
+
 
 .brand-logo{
     font-size: 40px;
 
 }
 
+
 .nav{
     background-color: #F7FAFC;
     color: rgba(0, 29, 51, 0.7) !important;
 }
+
 
 nav ul li a:hover{
     text-decoration: none;
@@ -30,3 +35,34 @@ nav ul li a:hover{
     color: #001D33;
 }
 
+/*------ SEÇÃO INICIAL: BANNER -----*/
+
+#banner{
+    position: absolute;
+    width: 100%;
+    height: 665px;
+    top: 60px;
+    background: url(../img/banner.png);
+    color: #f9f9f9;
+
+}
+
+h1 {
+    font-size: 70px;
+    margin-left: 7%;
+    height: center;
+    margin-top: 15%; 
+}
+
+#inscreva-se{
+    margin-left: 7%;
+    width: 232px;
+    height: 30px;
+    left: 150px;
+    top: 528px;
+
+    /* AMO */
+
+    background: #69ACDF;
+    border-radius: 5px;
+}
