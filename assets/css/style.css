@@ -239,3 +239,50 @@ a {
     font-size: 16px;
     text-align: center;
 }
+
+.box-header2{
+    border-radius: 1000px;
+    background-color: #69ACDF;
+    height: 120px;
+    width: 120px;
+    margin-top: 20px;
+    margin-bottom: -30%;
+    margin-left:57px;
+}
+
+.box-header2 img {
+    padding-top: 20px;
+    padding-left: 26px;
+    max-height: 90px;
+    width: auto;
+}
+
+.box2 {
+    width: 200px !important;
+    height: 293px;
+    margin-top: 2%;
+    color: #f9f9f9;
+    background: #69ACDF;
+    border-radius: 5px;
+    text-align:center;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: Conduit ITC Extra Light;
+    padding: 0 10px;
+    margin-left: 20px;
+
+}
+
+.lista {
+    font-size: 20px;
+    line-height: 22px;
+    padding-top: 20px;
+}
+
+.titulo-box2 {
+    font-family: Conduit ITC Bold;
+    font-size: 30px;
+    line-height: 21px;
+    text-align: center;
+    padding-top: 70px;
+}
