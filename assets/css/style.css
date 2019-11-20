@@ -4,38 +4,84 @@
      src: url('../font/Conduit_ITC.ttf');
 }
 
+@font-face{
+    font-family: 'Conduit ITC Light';
+     src: url('../font/conduit-itc-light.otf');
+}
+
+@font-face{
+    font-family: 'Conduit ITC Extra Light';
+     src: url('../font/conduit-itc-extralight.otf');
+}
+
+@font-face{
+    font-family: 'Conduit ITC Bold';
+     src: url('../font/conduit-itc-bold.ttf');
+}
+
+
 
 body{
+    font-family: 'Conduit ITC' !important;
+    color: rgba(0, 29, 51, 0.7);
+}
+
+.icon-bar {
+    background-color: #4A606F !important;
+}
+
+.navbar-header {
+    height: 70px;
+}
+
+.navbar-toggle {
+    border-color:  #4A606F !important;
+}
+
+.navbar{
+    background: #F7FAFC;
     font-family: 'Conduit ITC';
-    color: rgba(0, 29, 51, 0.7) !important;
+    color: rgba(0, 29, 51, 0.7);
+    padding-left: 6%;
+}
+
+.navbar-brand{
+    height: 70px !important;
+    padding: 22px 15px !important;
+    font-size: 36px !important;
+    line-height: 20px !important;
 }
 
 
-#container{
-    padding-right: 6% !important;
-    padding-left: 8% !important;
+.navbar-nav {
+    font-size: 26px !important;
+} 
+
+
+@media (min-width: 768px) {
+
+    .navbar-nav {
+        float: left;
+        margin-left: 26.5% !important; 
+        padding: 5px 0px !important;
+    }
+
+    .navbar-nav > li {
+        padding-right: 18px !important;
+    }
+}
+
+a {
+   color: #4A606F !important;
 }
 
 
-.brand-logo{
-    font-size: 40px;
+/*------ SEÇÃO INICIAL: BANNER ---------*/
 
+.home {
+    height: 665px;
+    margin-top: 0;
 }
-
-
-.nav{
-    background-color: #F7FAFC;
-    color: rgba(0, 29, 51, 0.7) !important;
-}
-
-
-nav ul li a:hover{
-    text-decoration: none;
-    background: transparent;
-    color: #001D33;
-}
-
-/*------ SEÇÃO INICIAL: BANNER -----*/
 
 #banner{
     position: absolute;
@@ -47,22 +93,71 @@ nav ul li a:hover{
 
 }
 
-h1 {
-    font-size: 70px;
+#titulo {
+    font-size: 90px;
     margin-left: 7%;
     height: center;
     margin-top: 15%; 
+    font-family: 'Conduit ITC Bold' !important;
 }
 
 #inscreva-se{
     margin-left: 7%;
     width: 232px;
-    height: 30px;
+    height: 45px;
     left: 150px;
     top: 528px;
-
-    /* AMO */
-
+    padding: 0px;
+    margin-top: 2%;
+    font-size: 22px;
     background: #69ACDF;
     border-radius: 5px;
+    border-color: #69ACDF;
+} 
+
+/*------ PÁGINA INICIAL: O CURSO ---------*/
+
+.curso {
+    height: 568px;
+}
+
+.titulo {
+    font-family: Conduit ITC Bold;
+    font-size: 38px;
+    line-height: 51px;
+    /* identical to box height */
+
+    text-align: center;
+
+    /* AE3 */
+
+    color:  #001D33;
+}
+
+.subtitulo {
+    font-family: Conduit ITC Light;
+    font-size: 20px;
+    line-height: 21px;
+    text-align: center;
+    color: rgba(0, 29, 51, 0.8);
+}
+
+.box {
+    width: 250px;
+    height: 293px;
+    margin-top: 20px;
+    color: #f9f9f9;
+    background: #00497F;
+    border-radius: 5px;
+    text-align:center;
+    font-size: 16px;
+    line-height: 20px;
+    font-family: Conduit ITC Extra Light;
+}
+
+.titulo-box {
+    font-family: Conduit ITC;
+    font-size: 22px;
+    line-height: 21px;
+    text-align: center;
 }
