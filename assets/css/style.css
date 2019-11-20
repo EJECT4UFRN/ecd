@@ -26,6 +26,11 @@ body{
     color: rgba(0, 29, 51, 0.7);
 }
 
+
+.col-md-2 {
+    width:20% !important;
+}
+
 .icon-bar {
     background-color: #4A606F !important;
 }
@@ -43,6 +48,10 @@ body{
     font-family: 'Conduit ITC';
     color: rgba(0, 29, 51, 0.7);
     padding-left: 6%;
+    position: fixed !important; /* Set the navbar to fixed position */
+    top: 0 !important; /* Position the navbar at the top of the page */
+    width: 100% !important; /* Full width */
+    z-index: 1;
 }
 
 .navbar-brand{
@@ -119,18 +128,14 @@ a {
 
 .curso {
     height: 568px;
+    margin-top: 6%;
 }
 
 .titulo {
     font-family: Conduit ITC Bold;
     font-size: 38px;
     line-height: 51px;
-    /* identical to box height */
-
     text-align: center;
-
-    /* AE3 */
-
     color:  #001D33;
 }
 
@@ -142,10 +147,29 @@ a {
     color: rgba(0, 29, 51, 0.8);
 }
 
+.titulo-azul {
+    font-family: Conduit ITC Bold;
+    font-size: 38px;
+    line-height: 51px;
+    text-align: center;
+    color: #f9f9f9;
+    margin-top: 40px;
+}
+
+.subtitulo-azul {
+    font-family: Conduit ITC Extra Light;
+    font-size: 20px;
+    line-height: 21px;
+    text-align: center;
+    color: #B0D8F4;
+}
+
+
+
 .box {
-    width: 250px;
+    width: 200px !important;
     height: 293px;
-    margin-top: 20px;
+    margin-top: 2%;
     color: #f9f9f9;
     background: #00497F;
     border-radius: 5px;
@@ -153,11 +177,65 @@ a {
     font-size: 16px;
     line-height: 20px;
     font-family: Conduit ITC Extra Light;
+    padding: 0 10px;
+    margin-left: 20px;
+
 }
 
 .titulo-box {
     font-family: Conduit ITC;
     font-size: 22px;
     line-height: 21px;
+    text-align: center;
+    padding-top: 70px;
+}
+
+.box-header{
+    border-radius: 1000px;
+    background-color: #00497F;
+    height: 120px;
+    width: 120px;
+    margin-top: 20px;
+    margin-bottom: -45%;
+    margin-left:57px;
+}
+
+.box-header img {
+    padding-top: 20px;
+    padding-left: 26px;
+    max-height: 90px;
+    width: auto;
+}
+
+.box p {
+    padding-top: 10px;
+}
+
+.docentes {
+    height: 719px;
+    background: #00497F;
+}
+
+.foto {
+    height: 250px;
+    width: 250px;
+    border-radius: 5px;
+    margin-top: 60px;
+}
+
+.nome {
+    font-family: Conduit ITC;
+    font-size: 26px;
+    line-height: 21px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+.titularidade {
+    color: #f9f9f9;
+}
+
+.cargo {
+    font-size: 16px;
     text-align: center;
 }
