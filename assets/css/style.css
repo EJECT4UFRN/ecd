@@ -141,10 +141,11 @@ a {
 
 .subtitulo {
     font-family: Conduit ITC Light;
-    font-size: 20px;
-    line-height: 21px;
+    font-size: 18px;
+    line-height: 20px;
     text-align: center;
     color: rgba(0, 29, 51, 0.8);
+    margin-top: 10px;
 }
 
 .titulo-azul {
@@ -247,7 +248,7 @@ a {
     width: 120px;
     margin-top: 20px;
     margin-bottom: -30%;
-    margin-left:57px;
+    margin-left:77px;
 }
 
 .box-header2 img {
@@ -258,7 +259,7 @@ a {
 }
 
 .box2 {
-    width: 200px !important;
+    width: 240px !important;
     height: 293px;
     margin-top: 2%;
     color: #f9f9f9;
@@ -286,3 +287,27 @@ a {
     text-align: center;
     padding-top: 70px;
 }
+
+.tcc {
+    margin-top: 60px;
+    text-align: center; 
+}
+
+#btn-tcc{
+    width: 110px;
+    height: 35px;
+    left: 150px;
+    top: 528px;
+    padding: 0px;
+    margin-top: 1%;
+    margin-bottom: 2%;
+    font-size: 20px;
+    background: #69ACDF;
+    border-radius: 5px;
+    border-color: #69ACDF;
+    float:none;
+    color: #f9f9f9;
+    font-family: Conduit ITC Extra Light;
+    margin-left: 20px;
+    margin-right: 20px;
+} 
