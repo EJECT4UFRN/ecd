@@ -1,34 +1,32 @@
-
-@font-face{
+@font-face {
     font-family: 'Conduit ITC';
-     src: url('../font/Conduit_ITC.ttf');
+    src: url('../font/Conduit_ITC.ttf');
 }
 
-@font-face{
+@font-face {
     font-family: 'Conduit ITC Light';
-     src: url('../font/conduit-itc-light.otf');
+    src: url('../font/conduit-itc-light.otf');
 }
 
-@font-face{
+@font-face {
     font-family: 'Conduit ITC Extra Light';
-     src: url('../font/conduit-itc-extralight.otf');
+    src: url('../font/conduit-itc-extralight.otf');
 }
 
-@font-face{
+@font-face {
     font-family: 'Conduit ITC Bold';
-     src: url('../font/conduit-itc-bold.ttf');
+    src: url('../font/conduit-itc-bold.ttf');
 }
 
 
 
-body{
+body {
     font-family: 'Conduit ITC' !important;
     color: rgba(0, 29, 51, 0.7);
 }
 
-
-.col-md-2 {
-    width:20% !important;
+a {
+    color: #4A606F !important;
 }
 
 .icon-bar {
@@ -40,95 +38,81 @@ body{
 }
 
 .navbar-toggle {
-    border-color:  #4A606F !important;
+    border-color: #4A606F !important;
 }
 
-.navbar{
+.navbar {
     background: #F7FAFC;
-    font-family: 'Conduit ITC';
     color: rgba(0, 29, 51, 0.7);
-    padding-left: 6%;
-    position: fixed !important; /* Set the navbar to fixed position */
-    top: 0 !important; /* Position the navbar at the top of the page */
-    width: 100% !important; /* Full width */
+    position: fixed !important;
+    width: 100% !important;
     z-index: 1;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin: 0px !important;
 }
 
-.navbar-brand{
-    height: 70px !important;
+.navbar-brand {
     padding: 22px 15px !important;
     font-size: 36px !important;
-    line-height: 20px !important;
 }
 
-
-.navbar-nav {
+.navbar-collapse .navbar-nav {
+    float: right;
+    padding: 5px 0px !important;
     font-size: 26px !important;
-} 
-
-
-@media (min-width: 768px) {
-
-    .navbar-nav {
-        float: left;
-        margin-left: 26.5% !important; 
-        padding: 5px 0px !important;
-    }
-
-    .navbar-nav > li {
-        padding-right: 18px !important;
-    }
-}
-
-a {
-   color: #4A606F !important;
 }
 
 
 /*------ SEÇÃO INICIAL: BANNER ---------*/
 
-.home {
-    height: 665px;
-    margin-top: 0;
+
+#banner {
+    width: 100% !important;
+    height: 725px;
+    color: #f9f9f9;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    background: url(../img/banner.png);
+    /* padding-top: 10%;
+    padding-bottom: 15%; */
+    display: table;
 }
 
-#banner{
-    position: absolute;
-    width: 100%;
-    height: 665px;
-    top: 60px;
-    background: url(../img/banner.png);
-    color: #f9f9f9;
-
+.box-texto-banner {
+    padding-left: 7%;
+    display: table-cell;
+    vertical-align: middle !important;
 }
 
 #titulo {
     font-size: 90px;
-    margin-left: 7%;
-    height: center;
-    margin-top: 15%; 
+    margin: 0px !important;
     font-family: 'Conduit ITC Bold' !important;
 }
 
-#inscreva-se{
-    margin-left: 7%;
+#inscreva-se {
     width: 232px;
     height: 45px;
-    left: 150px;
-    top: 528px;
     padding: 0px;
     margin-top: 2%;
     font-size: 22px;
     background: #69ACDF;
     border-radius: 5px;
     border-color: #69ACDF;
-} 
+}
 
 /*------ PÁGINA INICIAL: O CURSO ---------*/
 
 .curso {
-    height: 568px;
+
     margin-top: 6%;
+    margin-bottom: 6%;
+}
+
+.card-curso{
+    min-width:200px;
+    margin: 1%;
 }
 
 .titulo {
@@ -136,7 +120,7 @@ a {
     font-size: 38px;
     line-height: 51px;
     text-align: center;
-    color:  #001D33;
+    color: #001D33;
 }
 
 .subtitulo {
@@ -165,8 +149,6 @@ a {
     color: #B0D8F4;
 }
 
-
-
 .box {
     width: 200px !important;
     height: 293px;
@@ -174,7 +156,7 @@ a {
     color: #f9f9f9;
     background: #00497F;
     border-radius: 5px;
-    text-align:center;
+    text-align: center;
     font-size: 16px;
     line-height: 20px;
     font-family: Conduit ITC Extra Light;
@@ -191,14 +173,14 @@ a {
     padding-top: 70px;
 }
 
-.box-header{
+.box-header {
     border-radius: 1000px;
     background-color: #00497F;
     height: 120px;
     width: 120px;
     margin-top: 20px;
     margin-bottom: -45%;
-    margin-left:57px;
+    margin-left: 57px;
 }
 
 .box-header img {
@@ -213,7 +195,6 @@ a {
 }
 
 .docentes {
-    height: 719px;
     background: #00497F;
 }
 
@@ -241,14 +222,14 @@ a {
     text-align: center;
 }
 
-.box-header2{
+.box-header2 {
     border-radius: 1000px;
     background-color: #69ACDF;
     height: 120px;
     width: 120px;
     margin-top: 20px;
     margin-bottom: -30%;
-    margin-left:77px;
+    margin-left: 77px;
 }
 
 .box-header2 img {
@@ -265,7 +246,7 @@ a {
     color: #f9f9f9;
     background: #69ACDF;
     border-radius: 5px;
-    text-align:center;
+    text-align: center;
     font-size: 16px;
     line-height: 20px;
     font-family: Conduit ITC Extra Light;
@@ -290,10 +271,10 @@ a {
 
 .tcc {
     margin-top: 60px;
-    text-align: center; 
+    text-align: center;
 }
 
-#btn-tcc{
+#btn-tcc {
     width: 110px;
     height: 35px;
     left: 150px;
@@ -305,12 +286,12 @@ a {
     background: #69ACDF;
     border-radius: 5px;
     border-color: #69ACDF;
-    float:none;
+    float: none;
     color: #f9f9f9;
     font-family: Conduit ITC Extra Light;
     margin-left: 20px;
     margin-right: 20px;
-} 
+}
 
 .contato {
     height: 517px;
@@ -355,10 +336,85 @@ a {
     font-size: 20px;
     background: #003257;
     border-radius: 5px;
-    float:none;
+    float: none;
     color: #f9f9f9;
     font-family: Conduit ITC;
     margin-left: 20px;
     margin-right: 20px;
     border-width: 0px;
+}
+
+
+@media (max-width: 360px) {}
+
+@media (max-width: 640px) {
+
+    #titulo {
+        font-size: 45px !important;
+    }
+    .box-texto-banner {
+        padding-left: 3%!important;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .navbar-collapse .navbar-nav {
+        float: left;
+        padding-left: 5% !important;
+
+    }
+}
+
+@media (max-width: 1024px) {
+    .navbar {
+
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+
+    }
+
+    .navbar-collapse .navbar-nav {
+        font-size: 23px !important;
+    }
+
+    .navbar-brand {
+        font-size: 32px !important;
+    }
+
+    #titulo {
+        font-size: 80px;
+
+    }
+
+    /* #banner {
+        padding-top: 17%;
+        padding-bottom: 17%;
+    } */
+
+}
+
+
+
+@media (max-width: 1200px) {
+    .navbar-collapse {
+        padding: 0px !important;
+    }
+
+    .navbar {
+
+        padding-left: 3%;
+        padding-right: 3%;
+
+    }
+
+    .contato-detalhe,
+    .contato-detalhe2 {
+        display: none;
+    }
+
+    /* #banner {
+        padding-top: 16%;
+        padding-bottom: 16%;
+    } */
 }
