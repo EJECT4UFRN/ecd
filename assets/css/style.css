@@ -110,8 +110,8 @@ a {
     margin-bottom: 6%;
 }
 
-.card-curso{
-    min-width:200px;
+.card-curso {
+    min-width: 200px;
     margin: 1%;
 }
 
@@ -194,19 +194,31 @@ a {
     padding-top: 10px;
 }
 
+
+/* ---SEÇÃO DO CORPO DOCENTE------------------------------ */
+
 .docentes {
     background: #00497F;
+    padding-bottom: 2.5%;
 }
 
-.foto {
-    height: 250px;
-    width: 250px;
+.card-corpo-docente {
+    width: 250px !important;     
+    width: 250px!important;
+    margin:0.5%; 
+} 
+
+
+.foto img {
+    max-height: auto;
+    width: 100% !important;
     border-radius: 5px;
-    margin-top: 60px;
+}
+.slick-track{
+    /* width:810px!important; */
 }
 
 .nome {
-    font-family: Conduit ITC;
     font-size: 26px;
     line-height: 21px;
     text-align: center;
@@ -222,14 +234,33 @@ a {
     text-align: center;
 }
 
+/* ---SEÇÃO DE DISCIPLINAS------------------------------ */
+
+.header-disciplina {
+    margin-bottom: 2% !important;
+
+}
+
+.container-secao {
+    display: flex;
+    justify-content: center;
+}
+
+.box-disciplina {
+    min-height: 360px !important;
+    min-width: 200px !important;
+    width: 230px !important;
+    padding: 0!important;
+    margin:1%
+}
+
 .box-header2 {
-    border-radius: 1000px;
+    border-radius: 100%;
     background-color: #69ACDF;
     height: 120px;
     width: 120px;
-    margin-top: 20px;
-    margin-bottom: -30%;
-    margin-left: 77px;
+    margin: 0 auto;
+    margin-bottom: -25%;
 }
 
 .box-header2 img {
@@ -240,9 +271,8 @@ a {
 }
 
 .box2 {
-    width: 240px !important;
-    height: 293px;
-    margin-top: 2%;
+    width: 100% !important;
+    height: 300px !important;
     color: #f9f9f9;
     background: #69ACDF;
     border-radius: 5px;
@@ -251,7 +281,8 @@ a {
     line-height: 20px;
     font-family: Conduit ITC Extra Light;
     padding: 0 10px;
-    margin-left: 20px;
+
+
 
 }
 
@@ -270,7 +301,7 @@ a {
 }
 
 .tcc {
-    margin-top: 60px;
+    margin-top: 1.5%;
     text-align: center;
 }
 
@@ -314,6 +345,9 @@ a {
     margin: 0 40px;
     margin-top: 2%;
     color: #4A606F;
+    
+    min-width: 280px!important;
+    width: 500px!important;
     font-size: 16px;
     line-height: 20px;
     font-family: Conduit ITC Extra Light;
@@ -352,8 +386,9 @@ a {
     #titulo {
         font-size: 45px !important;
     }
+
     .box-texto-banner {
-        padding-left: 3%!important;
+        padding-left: 3% !important;
     }
 }
 
@@ -364,6 +399,8 @@ a {
         padding-left: 5% !important;
 
     }
+    
+
 }
 
 @media (max-width: 1024px) {
@@ -373,7 +410,11 @@ a {
         padding-right: 0px !important;
 
     }
-
+    .container-secao{
+        display: block!important;
+        
+    }
+    
     .navbar-collapse .navbar-nav {
         font-size: 23px !important;
     }
@@ -386,11 +427,7 @@ a {
         font-size: 80px;
 
     }
-
-    /* #banner {
-        padding-top: 17%;
-        padding-bottom: 17%;
-    } */
+    
 
 }
 
@@ -411,6 +448,10 @@ a {
     .contato-detalhe,
     .contato-detalhe2 {
         display: none;
+    }
+    .conteudo-contato{
+        display: flex;
+        justify-content: center;
     }
 
     /* #banner {
