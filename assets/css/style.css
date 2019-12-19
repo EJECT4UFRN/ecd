@@ -378,6 +378,90 @@ a {
     border-width: 0px;
 }
 
+/* FOOTER  */
+
+footer{
+    
+    width: 100%;
+    
+    /* AE3 */
+    font-family: Conduit ITC Light;
+    background: #001D33;
+    color:#F7FAFC!important;
+    font-size: 20px;
+    padding-top: 2%;
+}
+
+.icone-footer{
+    background-color:rgba(0, 73, 127, 0.4);
+    height:100px!important;
+    width: 100px!important;
+    border-radius: 100%;
+    text-align:center;
+    margin-top: 35px;
+    display: flex;
+    justify-content: center;
+    align-content: center; 
+}
+
+.texto-footer{
+    display: flex;
+    margin-top: 25px;
+}
+
+.texto-footer i{
+    font-size: 25px;
+    margin-right: 3.5%;
+    margin-top: 5px;
+    margin-left: 70px;
+}
+
+.wrap-icone-footer{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.icone-footer i{
+    color:#F7FAFC!important;
+    font-size:60px!important;
+}
+
+.icone-footer a{
+    display: flex;
+    align-items: center;
+}
+
+.container-footer{
+    margin-bottom:1%;
+    margin-top: 25px;
+    margin-right: 50px;
+}
+
+.menu-footer{
+    list-style-type: none;
+}
+
+.menu-footer a{
+    color:#F7FAFC!important;
+    cursor: pointer;
+    
+}
+
+.copyright-footer{
+    border-top: 1px solid #F7FAFC;
+    padding-top: 1%;
+    margin-top: 25px;
+    margin-right: 50px;
+}
+
+.copyright-footer a{
+    color: #F7FAFC!important;
+}
+
+
+/* FIM FOOTER */
+
 
 @media (max-width: 360px) {}
 
@@ -398,6 +482,11 @@ a {
         float: left;
         padding-left: 5% !important;
 
+    }
+
+    .menu-footer{
+        text-align: center;
+        padding: 0px;
     }
     
 
