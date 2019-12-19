@@ -1,0 +1,99 @@
+
+
+
+/*------ SEÇÃO INICIAL: BANNER ---------*/
+
+.modulo-disciplinas{
+    margin-top: -30px;
+}
+
+.home {
+    height: 360px;
+    margin-top: 0;
+}
+
+#banner-disciplinas{
+    height: 60vh;
+    background: url(../img/banner_disciplinas.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: #f9f9f9;
+    z-index: -9999999;
+
+}
+/*------ SEÇAO SOBRE AS DISCIPLINAS ---------*/
+#curso h1{
+    margin: 0 0 70px 0;
+}
+
+.background{
+    background-color: #f2f7fa;
+    width: 85%;
+}
+
+.background .row{
+    padding: 0 90px 120px 90px;
+}
+
+.disciplinas {
+    margin-top: 6%;
+}
+
+.titulo-disciplinas {
+    font-family: 'Conduit ITC Bold';
+    font-size: 38px;
+    line-height: 51px;
+    color:  #001D33;
+}
+
+.subtitulo-disciplinas {
+    font-family: 'Conduit ITC Light';
+    font-size: 35px;
+    color: rgba(0, 29, 51, 0.8);
+    margin-top: 35px;
+}
+
+.subtitulo-disciplinas p{
+    font-size: 23px;
+    padding: 25px 0 0 0;
+}
+
+span{
+    font-family: 'Conduit ITC Bold';
+}
+
+.titulo-azul {
+    font-family: Conduit ITC Bold;
+    font-size: 38px;
+    line-height: 51px;
+    text-align: center;
+    color: #f9f9f9;
+    margin-top: 40px;
+}
+
+.subtitulo-azul {
+    font-family: Conduit ITC Extra Light;
+    font-size: 20px;
+    line-height: 21px;
+    text-align: center;
+    color: #B0D8F4;
+}
+
+@media (max-width:768px){
+    .background .row{
+        padding: 50px 10px;
+    }
+
+    .titulo-disciplinas{
+        font-size: 30px;
+    }
+
+    .subtitulo-disciplinas{
+        font-size: 25px;
+    }
+
+    .subtitulo-disciplinas p{
+        font-size: 16px;
+    }
+}
