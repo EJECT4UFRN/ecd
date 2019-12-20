@@ -27,9 +27,15 @@
     margin: 0 0 70px 0;
 }
 
+.titulo{
+padding-top: 3%;
+font-size: 48px!important;
+}
+
 .background{
     background-color: #f2f7fa;
     width: 85%;
+    max-width: 1500px!important;
 }
 
 .background .row{

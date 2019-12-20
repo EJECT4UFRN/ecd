@@ -30,19 +30,21 @@ a {
 }
 
 /* COMPARTILHADO ------------------- */
-.container-fluid{
-    max-width:1700px!important;
+.container-fluid {
+    max-width: 1700px !important;
 }
+
 .conteudo-centralizado {
     display: flex !important;
     justify-content: center !important;
 }
 
 .card-compartilhado {
-    padding-top:20px;
+    padding-top: 20px;
     max-width: 320px;
     margin: 0 auto;
 }
+
 .box-header2 {
     border-radius: 100%;
     background-color: #00497F;
@@ -55,7 +57,7 @@ a {
 .box-header2 img {
     padding-top: 20px;
     padding-left: 26px;
-    max-height: 90px!important;
+    max-height: 90px !important;
     width: auto;
 }
 
@@ -137,28 +139,41 @@ a {
 
 /*------ PÁGINA INICIAL: O CURSO ---------*/
 
-.card-curso{    
+.flex-curso {
+    display: flex !important;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.item-curso {
+    flex: 1;
+    margin: 5px;
+    min-width: 188px;
+}
+
+.card-curso {
     max-width: 320px;
     margin: 0 auto; 
-    padding-bottom: 40px;  
+    padding-bottom: 40px;
 }
-.box-curso{
-    min-width: 210px!important;
+
+.box-curso {
+    min-width: 210px !important;
 }
 
 .box {
-    width: 100%;    
+    width: 100%;
     height: 300px;
     margin-top: 2%;
     color: #f9f9f9;
     background: #00497F;
     border-radius: 5px;
-    text-align:center;
+    text-align: center;
     font-size: 16px;
     line-height: 20px;
     font-family: Conduit ITC Extra Light;
     padding: 0 10px;
-    
+
 
 }
 
@@ -179,7 +194,7 @@ a {
     font-size: 38px;
     line-height: 51px;
     text-align: center;
-    color:  #001D33;
+    color: #001D33;
 }
 
 .subtitulo {
@@ -247,13 +262,6 @@ a {
 
 /* ---SEÇÃO DE DISCIPLINAS------------------------------ */
 
-
-
-.header-disciplina {
-    margin-bottom: 2% !important;
-
-}
-
 .box2 {
     width: 100% !important;
     min-height: 300px;
@@ -262,7 +270,7 @@ a {
     border-radius: 5px;
     text-align: center;
     font-size: 16px;
-    line-height: 17px!important;
+    line-height: 17px !important;
     font-family: Conduit ITC Extra Light;
     padding: 0 10px;
 }
@@ -367,82 +375,74 @@ a {
 
 /* FOOTER  */
 
-footer{
-    
+footer {
+
     width: 100%;
-    
+
     /* AE3 */
     font-family: Conduit ITC Light;
     background: #001D33;
-    color:#F7FAFC!important;
-    font-size: 20px;
-    padding-top: 2%;
+    color: #F7FAFC !important;
+    font-size: 18px;
+    padding-top: 30px;
+    padding-left: 2%;
+    padding-right: 2%;
 }
 
-.icone-footer{
-    background-color:rgba(0, 73, 127, 0.4);
-    height:100px!important;
-    width: 100px!important;
+.icone-footer {
+    background-color: rgba(0, 73, 127, 0.4);
+    height: 100px !important;
+    width: 100px !important;
     border-radius: 100%;
-    text-align:center;
+    text-align: center;
     display: flex;
     justify-content: center;
-    align-content: center; 
+    align-content: center;
+    margin: 0 auto;
 }
 
-.texto-footer{
+.texto-footer {
     display: flex;
     margin-top: 3.5%;
 }
 
-.texto-footer i{
+.texto-footer i {
     font-size: 25px;
     margin-right: 3.5%;
     margin-top: 5px;
-    margin-left: 3.5%;
+
 }
 
-.wrap-icone-footer{
-    display: flex;
-    justify-content: center;
-    align-content: center;
+.icone-footer i {
+    color: #F7FAFC !important;
+    font-size: 60px !important;
 }
 
-.icone-footer i{
-    color:#F7FAFC!important;
-    font-size:60px!important;
-}
-
-.icone-footer a{
+.icone-footer a {
     display: flex;
     align-items: center;
 }
 
-.container-footer{
-    margin-bottom:1%;
-    margin-top: 25px;
-    margin-right: 50px;
-}
 
-.menu-footer{
+.menu-footer {
     list-style-type: none;
 }
 
-.menu-footer a{
-    color:#F7FAFC!important;
+.menu-footer a {
+    color: #F7FAFC !important;
     cursor: pointer;
-    
+
 }
 
-.copyright-footer{
+.copyright-footer {
     border-top: 1px solid #F7FAFC;
     padding-top: 1%;
     margin-top: 25px;
     margin-right: 50px;
 }
 
-.copyright-footer a{
-    color: #F7FAFC!important;
+.copyright-footer a {
+    color: #F7FAFC !important;
 }
 
 
@@ -453,11 +453,11 @@ footer{
         padding: 0px !important;
     }
 
-    .menu-footer{
-        
+    .menu-footer {
+
         padding: 0px;
     }
-    
+
 
     .navbar {
         padding-left: 3%;
@@ -485,6 +485,10 @@ footer{
         font-size: 80px;
 
     }
+
+    .flex-curso {
+        flex-flow: row wrap!important;
+    }
 }
 
 @media (max-width: 768px) {
@@ -508,12 +512,18 @@ footer{
     .box-texto-banner {
         padding-left: 3% !important;
     }
-}
 
-@media (max-width: 530px) {
-    .row-conteudo-disciplica {
-        display:block!important;
+    .icone-footer {
+        height: 80px !important;
+        width: 80px !important;
+
+    }
+
+    .icone-footer i {
+        font-size: 50px !important;
     }
 }
+
+@media (max-width: 530px) {}
 
 @media (max-width: 360px) {}
