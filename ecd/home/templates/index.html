@@ -1,0 +1,354 @@
+{% load static %} {% load faicon %}
+
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+    <title>ECD - UFRN | Especialização em Ciência de Dados e Big Data </title>
+    <meta name="description"
+        content="Especialização em Ciência de Dados e Big Data (ECD), oferecida pelo Departamento de Estatística do Instituto de Matemática e Estatística da UFRN.">
+    <meta name="keywords" content="ECD; UFRN; Ciência de Dados; Big Data; Curso;">
+    <meta name="robots" content="index, follow">
+    <meta name="revisit-after" content="1 day">
+    <meta name="language" content="Portuguese">
+    <meta name="generator" content="N/A">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+    <link rel="icon" sizes="192x192" href="">
+    <link rel="shortcut icon" href="https://ufrn.br/resources/documentos/identidadevisual/brasao/brasao_gradiente.png"
+        type="image/png">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/style.css' %}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/slick-theme.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'assets/css/slick.css' %}">
+
+
+
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="{% url 'index' %}">ECD - UFRN</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#">Home</a></li>
+                    <li><a href="#curso">O Curso</a></li>
+                    <li><a href="#docentes">Corpo Docente</a></li>
+                    <li><a href="{% url 'disciplinas' %}">Disciplina</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <!----- SEÇÃO INICIAL DO SITE ---->
+
+    <section id="banner">
+        <div class="box-texto-banner">
+            <h1 id="titulo">Especialização em <br> Ciência de Dados</h1>
+            <button id="inscreva-se">INSCREVA-SE</button>
+        </div>
+    </section>
+
+    <!----- FIM DA SEÇÃO INICIAL  ---->
+
+
+    <!----- SEÇÃO SOBRE O CURSO ------>
+
+    <section id="curso" class="curso">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-12 col-sm-12" id="curso">
+                        <h2 class="titulo">O CURSO</h2>
+                        <h6 class="subtitulo">A Especialização em Ciência de Dados e Big Data (ECD), oferecida pelo
+                            Departamento de Estatística do Instituto de Matemática e Estatística<br> da Universidade Federal
+                            da Bahia (UFBA), aborda técnicas estatísticas, computacionais e matemáticas para a análise e
+                            manipulação de <br>grandes volumes de informação, com o intuito de formar cientistas de dados
+                            para atuação no setor público e privado. </h6>
+                    </div>
+                    <div id="boxes">
+                        {% for course in courses %}
+                        {% if forloop.first %}
+                        <div class="col-md-2 col-md-offset-1  col-sm-6 col-xs-12">
+                        {% else %}
+                        <div class=" col-md-2 col-sm-6 col-xs-12">
+                        {% endif %}
+                            <div class="card-curso">
+                                <div class="box-header2">
+                                    <img src="{{course.icon.url}}" alt="Ícone para simbolizar a estrutura do curso"
+                                        style="padding-left: 18px">
+                                </div>
+                                <div class="box">
+                                    <h6 class="titulo-box">{{course.title}}</h6>
+                                    <p>{{course.description}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <!----- FIM DA SEÇÃO SOBRE O CURSO ------>
+
+    
+
+    <!----- SEÇÃO CORPO DOCENTE ------>
+
+    <section id="docentes" class="docentes">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xl-12" id="docentes">
+                    <h2 class="titulo-azul">CORPO DOCENTE</h2>
+                    <h6 class="subtitulo-azul">Nossa equipe consta de diversos profissionais que atuam na área de
+                        Estatística e Computação. Veja abaixo <br> alguns dos membros que compoem o corpo docente.</h6>
+                </div>
+            </div>
+            <div class="row" id="fotos">
+                <div class="responsive">
+                    {% for professor in professors %}
+                    <div class="card-corpo-docente">
+                        <div class="foto">
+                            <img src="{{professor.image.url}}" alt="Foto do professor {{professor.name}}">
+                        </div>
+                        <div class="titularidade">
+                            <h6 class="nome">{{professor.name}}</h6>
+                            <h6 class="cargo">{{professor.position}}</h6>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----- FIM DA SEÇÃO CORPO DOCENTE ------>
+
+    <!----- SEÇÃO DISCIPLINAS ------>
+
+    <section id="disciplinas" class="disciplinas">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 header-disciplina" id="disciplinas">
+                    <h2 class="titulo" style="padding-top: 20px">DISCIPLINAS</h2>
+                    <h6 class="subtitulo">As disciplinas são divididas em três modulos. No Módulo I são introduzidas
+                        técnicas e conceitos básicos, no Módulo II são apresentadas ferramentas intermediárias e, no
+                        Módulo 3 são abordados alguns tópicos avançados em ciência de dados e big data. Para concluir
+                        esta especialização, os alunos devem elaborar e defender um Trabalho de Conclusão de Curso, sob
+                        avaliação de banca examinadora.</h6>
+                </div>
+            </div>
+            <div class="row">
+                {% for item in disciplines %}
+                <div class="col-md-3 col-sm-6 col-xs-12">
+                    <div class="card-compartilhado">
+                        <div class="box-header2">
+                            <img src="{{item.icon.url}}" alt="Ícone para simbolizar {{item.titulo}}">
+                        </div>
+                        <div class="box2">
+                            <h6 class="titulo-box2">{{item.title}}</h6>
+                            <div class="lista">
+                                <p>{{item.description|linebreaks}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+        </div>
+    </section>
+
+    <!----- FIM DA SEÇÃO DISCIPLINAS ------>
+
+
+    <!----- SEÇÃO TCC ------>
+
+    <section id="tcc" class="tcc">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xl-12" id="tcc">
+                    <h2 class="titulo">TRABALHO DE CONCLUSÃO DE CURSO - TCC </h2>
+                    <h6 class="subtitulo">Na ECD o TCC é uma atividade acadêmica obrigatótia para obter o título de
+                        Especialista em Ciência de Dados e Big Data. Maiores informações <br> ao respeito, podem
+                        encontrar no item 9 do Regimento Interno. A monografia deve ser elaborada, utilizando a
+                        linguagem de promação LATEX. O <br> aluno pode utilizar o editor de texto da sua preferência. Um
+                        template do TCC da ECD é disponibilizado no link a seguir: </h6>
+                    <button id="btn-tcc">Aqui</button>
+
+                    <h6 class="subtitulo">Quem não tiver familiaridade com LATEX, por gentileza, visite os links a
+                        seguir: </h6>
+                    {% for item in links %}
+                    <a href="{{item.link}}" target="_blank"><button id="btn-tcc">{{item.title}}</button></a>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----- FIM DA SEÇÃO TCC ------>
+
+
+    <!----- SEÇÃO CONTATO ------>
+
+    <section id="contato" class="contato">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 col-sm-12 col-xl-12" id="contato">
+                    <h2 class="titulo">ENTRE EM CONTATO </h2>
+                </div>
+            </div>
+            
+            <div class="row conteudo-centralizado">
+                <div class="col-md-3 contato-detalhe">
+
+                    <img src="{% static 'assets/img/det1.png' %}" alt="Detalhe de um circuito digital">
+                </div>
+                <div class="col-md-6 col-sm-10 col-xs-12">
+                    
+                    <form class="contato-form" method="POST" role="form">
+                        {% csrf_token %}
+                        
+                        {% if is_valid%}
+                            <script type="text/javascript">
+                                alert("Sua mensagem foi enviada com sucesso. A ECD agradece pelo seu contato!");
+                            </script>
+                          {% endif %}
+                          {% csrf_token %}
+                            <fieldset>
+                          {% for field in form %}
+                            {{ field }}
+                          {% endfor %}
+                            </fieldset>
+
+                        <!--<div class="form-group">
+                            <label for="nome">Nome</label>
+                            <input type="email" class="form-control" id="input-nome" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="exampleInputEmail1">E-mail</label>
+                            <input type="email" class="form-control" id="exampleInputEmail1"
+                                aria-describedby="emailHelp" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefone">Telefone</label>
+                            <input type="phone" class="form-control" id="input-telefone" placeholder="">
+                        </div>
+                        <div class="form-group">
+                            <label for="mensagem">Mensagem</label>
+                            <input type="text" class="form-control" id="input-mensagem" placeholder="">
+                        </div>-->
+                        <div class="form-group">
+                            <button type="submit" class="btn-contato">ENVIAR</button>
+                        </div>
+
+
+
+                    </form>
+                </div>
+                <div class="col-md-3 contato-detalhe2">
+                    <img src="{% static 'assets/img/det2.png' %}" alt="Detalhe de um circuito digital">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!----- FIM DA SEÇÃO CONTATO ------>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <div class="container">
+
+            <div class="row container-footer">
+
+                <div class="col-md-2 col-sm-4 col-xs-12">
+                    <ul class="menu-footer">
+                        <label> Menu</label>
+                        <li><a href="#banner" title="home" class="link-ome">Home</a></li>
+                        <li><a href="#curso" title="O Curso" class="link-cursos">Cursos</a></li>
+                        <li><a href="#docentes" title="Corpo Docente" class="link-equipe">Corpo Docente</a></li>
+                        <li><a href="#disciplinas" title="Disciplinas" class="link-disciplinas">Disciplinas</a></li>
+                        <li><a href="#contato" title="Contatos" class="link-contato">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-5 col-sm-8 col-xs-12">
+                    <div class="texto-footer">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p> UFRN - Avenida Senador Salgado Filho - Lagoa Nova, Natal - RN
+                                Setor X - Bloco Y - Sala W</p>
+                    </div>
+                    
+                </div>
+
+                <div class="col-md-2 col-sm-6 col-xs-12">
+                    <div class="texto-footer">
+                        <i class="fa fa-envelope"></i>
+                        <p> ecd.ufba@ufba.br</p>
+                    </div>
+
+                    <div class="texto-footer">
+                        <i class="fa fa-phone"></i>
+                        <p> (84)3283-6301</p>
+                    </div>
+
+                </div>
+                <div class="col-md-3 col-sm-2 col-xs-12 wrap-icone-footer">
+                    <div class="icone-footer">
+                        <a title="Facebook" href="https://www.facebook.com/cursinhopotengiifrneaj" target="_blank"
+                        rel="noopener">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="container-fluid">
+            <div class="row text-center copyright-footer">
+                <p> ECD - UFRN © 2019 | Desenvolvido pela
+                    <i class="fas fa-eject"></i>
+                    <a title="EJECT" href="https://www.ejectufrn.com.br/" target="_blank" rel="noopener">
+                        <strong>EJECT</strong>
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- FIM FOOTER -->
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="{% static 'assets/js/slick.js' %}"></script>
+    <script src="{% static 'assets/js/slick.min.js' %}"></script>
+    <script src="{% static 'assets/js/main.js' %}"></script>
+
+</body>
+
+</html>

@@ -1,11 +1,12 @@
 from django.shortcuts import render
 from home.models import *
+from .forms import ContactECD
 
 
 
 # --------------- VIEW DA PÁGINA INICIAL ------------------# 
 
-"""
+
 def index(request):
     
     banners = Banner.objects.all()
@@ -28,26 +29,27 @@ def index(request):
     }
     
     if request.method == 'POST': 
+        form = ContactECD(request.POST or None)
+        if form.is_valid():
+            context['is_valid'] = True
+            form.send_mail()
+            form = ContactECD()	
 
-		form = ContactECD(request.POST, request.FILES)
-		if form.is_valid():
-			context['is_valid'] = True
-			form.send_mail()
-			
-	else:
-		form = ContactECD()
-	context ['form'] = form
-    
-    return render(request, 'home/index.html', context)
-"""   
+    else:
+        form = ContactECD()
+    context ['form'] = form
+
+
+    return render(request, 'index.html', context)
+ 
 
 
 
 # --------------- VIEW DA PÁGINA DISCIPLINA ------------------# 
 
-"""
 
-def disciplina(request):
+
+def disciplinas(request):
     
     infos = Infos.objects.all()
     references = Reference.objects.all()
@@ -61,15 +63,14 @@ def disciplina(request):
     
     if request.method == 'POST': 
 
-		form = ContactECD(request.POST, request.FILES)
-		if form.is_valid():
-			context['is_valid'] = True
-			form.send_mail()
-			
-	else:
-		form = ContactECD()
+    	form = ContactECD(request.POST, request.FILES)
+    	if form.is_valid():
+    		context['is_valid'] = True
+    		form.send_mail()
+    		
+    else:
+    	form = ContactECD()
         
-	context ['form'] = form
-    return render(request, 'home/disciplina.html', context)
+    context ['form'] = form
+    return render(request, 'disciplinas.html', context)
     
-"""

@@ -26,7 +26,7 @@ class Banner(models.Model):
 class Course(models.Model):
     title = models.CharField('Título', max_length=100)
     slug = models.SlugField('Atalho')
-    icon = FAIconField('Ícone', null=True)
+    icon = models.ImageField(upload_to='course/images', verbose_name='Ícone', null=False, blank=False)
     description = models.TextField('Descrição', max_length=200, blank=False)
     prepopulated_fields = {'slug':['name']}
     
@@ -63,7 +63,7 @@ class Professor(models.Model):
 class Discipline(models.Model):
     title = models.CharField('Título', max_length=100)
     slug = models.SlugField('Atalho')
-    icon = FAIconField('Ícone', null=True)
+    icon = models.ImageField(upload_to='discipline/images', verbose_name='Ícone', null=False, blank=False)
     description = models.TextField('Descrição', max_length=200, blank=False)
     prepopulated_fields = {'slug':['name']}
     
@@ -103,7 +103,7 @@ class Link(models.Model):
     prepopulated_fields = {'slug':['title']}
     
     def __str__(self):
-        return self.name
+        return self.title
     
     class Meta: 
         verbose_name = 'Link'
