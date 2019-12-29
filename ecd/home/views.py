@@ -9,23 +9,19 @@ from .forms import ContactECD
 
 def index(request):
     
-    banners = Banner.objects.all()
     courses = Course.objects.all()
     professors = Professor.objects.all()
     disciplines = Discipline.objects.all()
     templates = Template.objects.all()
     links = Link.objects.all()
-    contacts = Contact.objects.all()
     
     
     context = {
-        'banners': banners, 
         'courses': courses,
         'professors': professors,
         'disciplines': disciplines,
         'templates': templates,
         'links': links,
-        'contacts': contacts,
     }
     
     if request.method == 'POST': 
@@ -58,7 +54,6 @@ def disciplinas(request):
     context = {
         'infos': infos,
         'references': references,
-        'contacts': contacts,
     }
     
     if request.method == 'POST': 

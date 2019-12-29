@@ -65,7 +65,7 @@
     <section id="banner">
         <div class="box-texto-banner">
             <h1 id="titulo">Especialização em <br> Ciência de Dados</h1>
-            <button id="inscreva-se">INSCREVA-SE</button>
+            <a href="#contato" style="color:white !important;"><button id="inscreva-se">INSCREVA-SE</button></a>
         </div>
     </section>
 
@@ -169,7 +169,7 @@
                         <div class="box2">
                             <h6 class="titulo-box2">{{item.title}}</h6>
                             <div class="lista">
-                                <p>{{item.description|linebreaks}}</p>
+                                <p>{{item.description|safe|linebreaks}}</p>
                             </div>
                         </div>
                     </div>
@@ -259,6 +259,14 @@
                             <label for="mensagem">Mensagem</label>
                             <input type="text" class="form-control" id="input-mensagem" placeholder="">
                         </div>-->
+                        <style>
+                            
+                            textarea {
+                                border-radius: 12px !important;
+                                border-color: rgba(0, 29, 51, 0.7) !important;
+                                border-width: 2px !important;
+                            }
+                        </style>
                         <div class="form-group">
                             <button type="submit" class="btn-contato">ENVIAR</button>
                         </div>
@@ -319,7 +327,7 @@
                 </div>
                 <div class="col-md-3 col-sm-2 col-xs-12 wrap-icone-footer">
                     <div class="icone-footer">
-                        <a title="Facebook" href="https://www.facebook.com/cursinhopotengiifrneaj" target="_blank"
+                        <a title="Facebook" href="https://www.facebook.com/" target="_blank"
                         rel="noopener">
                             <i class="fab fa-facebook-f"></i>
                         </a>

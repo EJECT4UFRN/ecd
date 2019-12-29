@@ -11,7 +11,7 @@ class ContactECD(forms.Form):
 	email = forms.EmailField(label = 'E-mail', widget=forms.TextInput(attrs={'class':'form-group form-control', 'placeholder':'E-mail', 'required':'required', 'type': 'email'}) )
 	about = forms.CharField(label="Assunto", widget=forms.TextInput(attrs={'class':'form-group form-control', 'placeholder':'Assunto', 'required':'required'})) 
 	phone = forms.CharField(label = 'Telefone', widget=forms.TextInput(attrs={'class':'form-group form-control', 'placeholder':'Telefone', 'required':'required'}))
-	message = forms.CharField(label='Mensagem', widget=forms.TextInput(attrs={'class':'form-group form-control', 'id': 'input-mensagem','placeholder':'Mensagem', 'required':'required'}))
+	message = forms.CharField(label='Mensagem', widget=forms.Textarea(attrs={'class':'input form-group form-control', 'id': 'input-mensagem','placeholder':'Mensagem', 'required':'required', 'rows':'3'}))
 	#document = forms.Field(label='Selecione um arquivo', widget=forms.FileInput)
 	
 	def send_mail(self):
